@@ -24,15 +24,14 @@ public class Ball : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Space))
             {
                 isMoving = true;
-                Rigidbody2D rb = GetComponent<Rigidbody2D>();
 
-                rb.velocity = new Vector2(5f, 10f);
+                GetComponent<Rigidbody2D>().velocity = new Vector2(5f, 10f);
             }
         }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        //isMoving = false;
+        // GetComponent<AudioSource>().Play();
     }
 }
